@@ -1,0 +1,116 @@
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+/>
+
+<div class="ct-topbar">
+  <div class="container">
+    <ul class="list-unstyled list-inline ct-topbar__list">
+      <li class="ct-language" translate="no">
+        Language <i class="fa fa-arrow-down"></i>
+        <ul class="list-unstyled ct-language__dropdown">
+          <li>
+            <a
+              href="#googtrans(en|en)"
+              class="lang-en lang-select"
+              translate="no"
+              data-lang="en"
+              >USA</a
+            >
+          </li>
+          <li>
+            <a
+              href="#googtrans(en|fr)"
+              class="lang-es lang-select"
+              translate="no"
+              data-lang="fr"
+              >FRANCE</a
+            >
+          </li>
+          <li>
+            <a
+              href="#googtrans(en|zh-CN)"
+              class="lang-es lang-select"
+              translate="no"
+              data-lang="zh-CN"
+              >CHINA</a
+            >
+          </li>
+          <li>
+            <a
+              href="#googtrans(en|ja)"
+              class="lang-es lang-select"
+              translate="no"
+              data-lang="ja"
+              >JAPAN</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a
+            href="#"
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Dropdown <span class="caret"></span
+          ></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT,
+      },
+      "google_translate_element"
+    );
+  }
+
+  jQuery(".lang-select").click(function () {
+    var theLang = jQuery(this).attr("data-lang");
+    window.location = jQuery(this).attr("href");
+    location.reload();
+  });
+</script>
+
+<script
+  type="text/javascript"
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
